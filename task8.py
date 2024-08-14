@@ -89,8 +89,6 @@ for conf in key_confs:
 
 min_output = min(len_collated_str)
 
-
-
 for conf in conf_used:
     for child_conf in conf:
         child_conf_arr = child_conf.split('|')

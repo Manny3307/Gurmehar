@@ -63,12 +63,12 @@ def generate_robbie_str(input_str, key_conf):
     first_entry = True
     Last_character_position = 0
     robbie_instruction_str = ""
-    for i in input_str:
-        for j in key_conf:
+    for i in input_str: #i = g input_str = gurmehar
+        for j in key_conf: #j = abcdefghijklm , nopqrstuvwxyz
             if(i in j):
                 row_number = get_row_count(i, key_conf)
                 last_str = get_last_string(i, key_conf, last_row_number, first_entry)
-                character_position = (j.find(i)) + 1
+                character_position = (j.find(i)) + 1 #j.find('g')
                 calculated_position = character_position - Last_character_position  
                 Last_character_position = character_position
                 if(calculated_position <= 0):
